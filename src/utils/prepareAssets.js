@@ -62,14 +62,17 @@ const fonts = {
     },
   },
 };
+
 // Available fonts
+const centerCorrection = (size, lineHeight) =>
+  (size * lineHeight - size) / 2;
+
 export const Fonts = {
   ...fonts,
-  KhmerOSbattambang: {
-    src: '/KhmerOSbattambang.ttf', // 9.9 MB
-    correction(size, lineHeight) {
-      return (size * lineHeight - size) / 2;
-    },
+  KhmerOSbattambang: { src: '/KhmerOSbattambang.ttf' },
+  '標楷體': {
+    src: '/CK.ttf',
+    correction: centerCorrection,
   },
 };
 
